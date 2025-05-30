@@ -1,0 +1,387 @@
+[
+    {
+        "model": "gpt-4o-2024-11-20",
+        "run_id": "RUNID_1",
+        "task_name": "relevance_check_v0",
+        "article_id": "itespresso_20250530144751622699",
+        "relevance": 2,
+        "article_language": "es",
+        "source_name": "itespresso",
+        "article_title": "C\u00f3mo mantener el impulso de tu startup durante la \u00e9poca navide\u00f1a",
+        "article_url": "https://www.itespresso.es/startups-en-navidad-243832.html",
+        "article_keywords": [
+            "startups",
+            "christmas season"
+        ],
+        "crawled_at": "2025-05-30 14:47:51"
+    },
+    {
+        "model": "gpt-4o-2024-11-20",
+        "run_id": "RUNID_1",
+        "task_name": "relevance_check_v0",
+        "article_id": "business_insider_20250530144751745941",
+        "relevance": 2,
+        "article_language": "es",
+        "source_name": "business_insider",
+        "article_title": "Brian Chesky (Airbnb) cree que hay un \"lado positivo\" en montar negocios en una econom\u00eda inestable",
+        "article_url": "https://www.businessinsider.es/tecnologia/brian-chesky-airbnb-cree-hay-lado-positivo-montar-negocios-economia-inestable-1462988",
+        "article_keywords": [
+            "Airbnb",
+            "Brian Chesky",
+            "negocios",
+            "econom\u00eda inestable"
+        ],
+        "crawled_at": "2025-05-30 14:47:51"
+    },
+    {
+        "model": "gpt-4o-2024-11-20",
+        "run_id": "RUNID_1",
+        "task_name": "relevance_check_v0",
+        "article_id": "business_insider_20250530144751756221",
+        "relevance": 2,
+        "article_language": "es",
+        "source_name": "business_insider",
+        "article_title": "MF Talent premia el talento y la innovaci\u00f3n e impulsa la IA y la ciberseguridad como motores de un futuro m\u00e1s sostenible",
+        "article_url": "https://www.businessinsider.es/tecnologia/mf-talent-premia-talento-innovacion-impulsa-ia-ciberseguridad-como-motores-futuro-sostenible-1462985",
+        "article_keywords": [
+            "MF Talent",
+            "talento",
+            "innovaci\u00f3n",
+            "IA"
+        ],
+        "crawled_at": "2025-05-30 14:47:51"
+    },
+    {
+        "model": "gpt-4o-2024-11-20",
+        "run_id": "RUNID_1",
+        "task_name": "relevance_check_v0",
+        "article_id": "business_insider_20250530144751714997",
+        "relevance": 2,
+        "article_language": "es",
+        "source_name": "business_insider",
+        "article_title": "335 millones menos en estafas: c\u00f3mo Visa bloque\u00f3 el 75% de las tarjetas comprometidas en una operaci\u00f3n criminal con inteligencia artificial",
+        "article_url": "https://www.businessinsider.es/tecnologia/335-millones-menos-estafas-como-visa-bloqueo-75-tarjetas-comprometidas-operacion-criminal-inteligencia-artificial-1462936",
+        "article_keywords": [
+            "Visa",
+            "estafas",
+            "inteligencia artificial",
+            "tarjetas"
+        ],
+        "crawled_at": "2025-05-30 14:47:51"
+    },
+    {
+        "model": "gpt-4o-2024-11-20",
+        "run_id": "RUNID_1",
+        "task_name": "relevance_check_v0",
+        "article_id": "the_next_web_20250530144751540829",
+        "relevance": 2,
+        "article_language": "en",
+        "source_name": "the_next_web",
+        "article_title": "Bioprinted organs \u201810\u201315 years away,\u2019 says startup regenerating dog skin",
+        "article_url": "https://thenextweb.com/news/bioprinting-human-organs-in-10-years",
+        "article_keywords": [
+            "bioprinting",
+            "human organs",
+            "deep tech"
+        ],
+        "crawled_at": "2025-05-30 14:47:51"
+    },
+    {
+        "model": "gpt-4o-2024-11-20",
+        "run_id": "RUNID_1",
+        "task_name": "relevance_check_v0",
+        "article_id": "business_insider_20250530144751735728",
+        "relevance": 2,
+        "article_language": "es",
+        "source_name": "business_insider",
+        "article_title": "Instagram ofrece pagar a los creadores de contenido hasta 18.000 euros por atraer personas a la aplicaci\u00f3n",
+        "article_url": "https://www.businessinsider.es/tecnologia/instagram-ofrece-creadores-contenido-18000-euros-atraer-personas-1462193",
+        "article_keywords": [
+            "Instagram",
+            "creadores de contenido",
+            "programa Referrals",
+            "registro"
+        ],
+        "crawled_at": "2025-05-30 14:47:51"
+    },
+    {
+        "model": "gpt-4o-2024-11-20",
+        "run_id": "RUNID_1",
+        "task_name": "relevance_check_v0",
+        "article_id": "the_next_web_20250530144751561249",
+        "relevance": 2,
+        "article_language": "en",
+        "source_name": "the_next_web",
+        "article_title": "Can geothermal startups drill Europe to clean energy independence?",
+        "article_url": "https://thenextweb.com/news/geothermal-energy-startups-europe-energy-security",
+        "article_keywords": [
+            "geothermal",
+            "clean energy",
+            "startups"
+        ],
+        "crawled_at": "2025-05-30 14:47:51"
+    },
+    {
+        "model": "gpt-4o-2024-11-20",
+        "run_id": "RUNID_1",
+        "task_name": "relevance_check_v0",
+        "article_id": "itespresso_20250530144751612511",
+        "relevance": 2,
+        "article_language": "es",
+        "source_name": "itespresso",
+        "article_title": "Apple es la compa\u00f1\u00eda tecnol\u00f3gica que m\u00e1s ganancias tiene por empleado",
+        "article_url": "https://www.itespresso.es/apple-ganancias-empleado-243925.html",
+        "article_keywords": [
+            "Apple",
+            "employee earnings"
+        ],
+        "crawled_at": "2025-05-30 14:47:51"
+    },
+    {
+        "model": "gpt-4o-2024-11-20",
+        "run_id": "RUNID_1",
+        "task_name": "relevance_check_v0",
+        "article_id": "itespresso_20250530144751601990",
+        "relevance": 2,
+        "article_language": "es",
+        "source_name": "itespresso",
+        "article_title": "7 metas que deber\u00e1n marcar la relaci\u00f3n de las empresas con la tecnolog\u00eda en 2024",
+        "article_url": "https://www.itespresso.es/objetivos-relacion-empresas-tecnologia-243911.html",
+        "article_keywords": [
+            "companies and technology",
+            "goals 2024"
+        ],
+        "crawled_at": "2025-05-30 14:47:51"
+    },
+    {
+        "model": "gpt-4o-2024-11-20",
+        "run_id": "RUNID_1",
+        "task_name": "relevance_check_v0",
+        "article_id": "itespresso_20250530144751591826",
+        "relevance": 2,
+        "article_language": "es",
+        "source_name": "itespresso",
+        "article_title": "ENISA ya cuenta con m\u00e1s de medio millar de startups certificadas",
+        "article_url": "https://www.itespresso.es/enisa-startups-certificadas-243919.html",
+        "article_keywords": [
+            "ENISA",
+            "certified startups",
+            "technology news"
+        ],
+        "crawled_at": "2025-05-30 14:47:51"
+    },
+    {
+        "model": "gpt-4o-2024-11-20",
+        "run_id": "RUNID_1",
+        "task_name": "relevance_check_v0",
+        "article_id": "business_insider_20250530144751663668",
+        "relevance": 2,
+        "article_language": "es",
+        "source_name": "business_insider",
+        "article_title": "El ecosistema tecnol\u00f3gico espa\u00f1ol crece un 22% y Madrid desplaza a Barcelona como capital de la innovaci\u00f3n",
+        "article_url": "https://www.businessinsider.es/tecnologia/ecosistema-tecnologico-espanol-crece-22-madrid-desplaza-barcelona-como-capital-innovacion-1463601",
+        "article_keywords": [
+            "ecosistema",
+            "tecnolog\u00eda",
+            "innovaci\u00f3n",
+            "Espa\u00f1a"
+        ],
+        "crawled_at": "2025-05-30 14:47:51"
+    },
+    {
+        "model": "gpt-4o-2024-11-20",
+        "run_id": "RUNID_1",
+        "task_name": "relevance_check_v0",
+        "article_id": "the_next_web_20250530144751551046",
+        "relevance": 2,
+        "article_language": "en",
+        "source_name": "the_next_web",
+        "article_title": "\u2018Purest meat alternative\u2019 to grow in Swedish mycoprotein factory",
+        "article_url": "https://thenextweb.com/news/purest-meat-alternative-to-grow-in-swedish-mycoprotein-factory",
+        "article_keywords": [
+            "meat alternative",
+            "sustainability",
+            "factory"
+        ],
+        "crawled_at": "2025-05-30 14:47:51"
+    },
+    {
+        "model": "gpt-4o-2024-11-20",
+        "run_id": "RUNID_1",
+        "task_name": "relevance_check_v0",
+        "article_id": "business_insider_20250530144751766548",
+        "relevance": 2,
+        "article_language": "es",
+        "source_name": "business_insider",
+        "article_title": "Xiaomi lanza su segundo coche el\u00e9ctrico: su YU7 es la nueva amenaza para Tesla en China",
+        "article_url": "https://www.businessinsider.es/tecnologia/xiaomi-lanza-segundo-coche-electrico-yu7-nueva-amenaza-tesla-china-1462987",
+        "article_keywords": [
+            "Xiaomi",
+            "coche el\u00e9ctrico",
+            "amulet",
+            "Tesla"
+        ],
+        "crawled_at": "2025-05-30 14:47:51"
+    },
+    {
+        "model": "gpt-4o-2024-11-20",
+        "run_id": "RUNID_1",
+        "task_name": "relevance_check_v0",
+        "article_id": "business_insider_20250530144751694527",
+        "relevance": 2,
+        "article_language": "es",
+        "source_name": "business_insider",
+        "article_title": "El CEO de Duolingo revela 5 formas en las que la IA le ayudar\u00e1 a decidir el futuro de su plantilla",
+        "article_url": "https://www.businessinsider.es/tecnologia/ceo-duolingo-revela-5-formas-ia-ayudara-decidir-futuro-plantilla-1458249",
+        "article_keywords": [
+            "Duolingo",
+            "IA",
+            "plantilla",
+            "empresa"
+        ],
+        "crawled_at": "2025-05-30 14:47:51"
+    },
+    {
+        "model": "gpt-4o-2024-11-20",
+        "run_id": "RUNID_1",
+        "task_name": "relevance_check_v0",
+        "article_id": "business_insider_20250530144751673882",
+        "relevance": 2,
+        "article_language": "es",
+        "source_name": "business_insider",
+        "article_title": "Las ventas de Tesla siguen desplom\u00e1ndose en Europa pese al crecimiento de los coches el\u00e9ctricos",
+        "article_url": "https://www.businessinsider.es/tecnologia/ventas-tesla-siguen-desplomandose-europa-pese-crecimiento-coches-electricos-1463652",
+        "article_keywords": [
+            "Tesla",
+            "coches el\u00e9ctricos",
+            "ventas",
+            "Europa"
+        ],
+        "crawled_at": "2025-05-30 14:47:51"
+    },
+    {
+        "model": "gpt-4o-2024-11-20",
+        "run_id": "RUNID_1",
+        "task_name": "relevance_check_v0",
+        "article_id": "business_insider_20250530144751643191",
+        "relevance": 2,
+        "article_language": "es",
+        "source_name": "business_insider",
+        "article_title": "Meta, la matriz de Facebook, planea abrir tiendas f\u00edsicas para vender sus gafas inteligentes",
+        "article_url": "https://www.businessinsider.es/tecnologia/meta-matriz-facebook-planea-abrir-tiendas-fisicas-vender-gafas-inteligentes-1463955",
+        "article_keywords": [
+            "Meta",
+            "Facebook",
+            "tiendas f\u00edsicas",
+            "gafas inteligentes"
+        ],
+        "crawled_at": "2025-05-30 14:47:51"
+    },
+    {
+        "model": "gpt-4o-2024-11-20",
+        "run_id": "RUNID_1",
+        "task_name": "relevance_check_v0",
+        "article_id": "business_insider_20250530144751704745",
+        "relevance": 2,
+        "article_language": "es",
+        "source_name": "business_insider",
+        "article_title": "Esta es la historia jam\u00e1s contada de c\u00f3mo la startup de programaci\u00f3n m\u00e1s prometedora de Silicon Valley estuvo a punto de desaparecer",
+        "article_url": "https://www.businessinsider.es/tecnologia/historia-jamas-contada-como-startup-programacion-prometedora-silicon-valley-estuvo-punto-desaparecer-1462044",
+        "article_keywords": [
+            "StackBlitz",
+            "startup",
+            "programaci\u00f3n",
+            "Silicon Valley"
+        ],
+        "crawled_at": "2025-05-30 14:47:51"
+    },
+    {
+        "model": "gpt-4o-2024-11-20",
+        "run_id": "RUNID_1",
+        "task_name": "relevance_check_v0",
+        "article_id": "the_next_web_20250530144751581654",
+        "relevance": 2,
+        "article_language": "en",
+        "source_name": "the_next_web",
+        "article_title": "Elon Musk\u2019s Grok chatbot banned by a quarter of European firms",
+        "article_url": "https://thenextweb.com/news/elon-musks-grok-chatbot-banned-by-european-firms",
+        "article_keywords": [
+            "Elon Musk",
+            "chatbot",
+            "data security"
+        ],
+        "crawled_at": "2025-05-30 14:47:51"
+    },
+    {
+        "model": "gpt-4o-2024-11-20",
+        "run_id": "RUNID_1",
+        "task_name": "relevance_check_v0",
+        "article_id": "business_insider_20250530144751797294",
+        "relevance": 2,
+        "article_language": "es",
+        "source_name": "business_insider",
+        "article_title": "OpenAI compra una startup de hardware de IA al dise\u00f1ador del iPhone por casi 5.750 millones euros",
+        "article_url": "https://www.businessinsider.es/tecnologia/openai-compra-startup-hardware-ia-disenador-iphone-casi-5750-millones-euros-1462702",
+        "article_keywords": [
+            "OpenAI",
+            "hardware de IA",
+            "Jony Ive",
+            "compra"
+        ],
+        "crawled_at": "2025-05-30 14:47:51"
+    },
+    {
+        "model": "gpt-4o-2024-11-20",
+        "run_id": "RUNID_1",
+        "task_name": "relevance_check_v0",
+        "article_id": "business_insider_20250530144751786992",
+        "relevance": 2,
+        "article_language": "es",
+        "source_name": "business_insider",
+        "article_title": "Esta es la verdadera raz\u00f3n por la que OpenAI se gasta 5.750 millones de euros en hacerse con la startup de IA de Jony Ive",
+        "article_url": "https://www.businessinsider.es/tecnologia/verdadera-razon-openai-gasta-5750-millones-euros-hacerse-startup-ia-jony-ive-1462758",
+        "article_keywords": [
+            "OpenAI",
+            "Jony Ive",
+            "IA",
+            "startup"
+        ],
+        "crawled_at": "2025-05-30 14:47:51"
+    },
+    {
+        "model": "gpt-4o-2024-11-20",
+        "run_id": "RUNID_1",
+        "task_name": "relevance_check_v0",
+        "article_id": "business_insider_20250530144751776758",
+        "relevance": 2,
+        "article_language": "es",
+        "source_name": "business_insider",
+        "article_title": "Cook ignora a Trump: Apple ampliar\u00e1 su cadena de suministro en India con una planta de 1.300 millones de euros",
+        "article_url": "https://www.businessinsider.es/tecnologia/cook-ignora-trump-apple-ampliara-cadena-suministro-india-planta-1300-millones-euros-1462924",
+        "article_keywords": [
+            "Apple",
+            "Tim Cook",
+            "India",
+            "cadena de suministro"
+        ],
+        "crawled_at": "2025-05-30 14:47:51"
+    },
+    {
+        "model": "gpt-4o-2024-11-20",
+        "run_id": "RUNID_1",
+        "task_name": "relevance_check_v0",
+        "article_id": "business_insider_20250530144751817862",
+        "relevance": 2,
+        "article_language": "es",
+        "source_name": "business_insider",
+        "article_title": "Sergey Brin (Google) explica por qu\u00e9 ha vuelto a la empresa para trabajar en IA \"pr\u00e1cticamente todos los d\u00edas\"",
+        "article_url": "https://www.businessinsider.es/tecnologia/sergey-brin-google-explica-ha-vuelto-empresa-trabajar-ia-practicamente-todos-dias-1462584",
+        "article_keywords": [
+            "Sergey Brin",
+            "Google",
+            "IA",
+            "trabajo"
+        ],
+        "crawled_at": "2025-05-30 14:47:51"
+    }
+]

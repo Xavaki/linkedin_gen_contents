@@ -1,0 +1,338 @@
+[
+    {
+        "model": "gpt-4o-2024-11-20",
+        "run_id": "RUNID_2",
+        "task_name": "relevance_check_v0",
+        "article_id": "techcrunch_20250530144755886209",
+        "relevance": 2,
+        "article_language": "en",
+        "source_name": "techcrunch",
+        "article_title": "Hugging Face unveils two new humanoid robots",
+        "article_url": "https://techcrunch.com/2025/05/29/hugging-face-unveils-two-new-humanoid-robots/",
+        "article_keywords": [
+            "Robotics"
+        ],
+        "crawled_at": "2025-05-30 14:47:55"
+    },
+    {
+        "model": "gpt-4o-2024-11-20",
+        "run_id": "RUNID_2",
+        "task_name": "relevance_check_v0",
+        "article_id": "itespresso_20250530144756051666",
+        "relevance": 2,
+        "article_language": "es",
+        "source_name": "itespresso",
+        "article_title": "Apple lanz\u00f3 discretamente un LLM multimodal de c\u00f3digo abierto en octubre",
+        "article_url": "https://www.itespresso.es/apple-llm-multimodal-open-source-243999.html",
+        "article_keywords": [
+            "Apple",
+            "LLM c\u00f3digo abierto"
+        ],
+        "crawled_at": "2025-05-30 14:47:55"
+    },
+    {
+        "model": "gpt-4o-2024-11-20",
+        "run_id": "RUNID_2",
+        "task_name": "relevance_check_v0",
+        "article_id": "itespresso_20250530144755969786",
+        "relevance": 2,
+        "article_language": "es",
+        "source_name": "itespresso",
+        "article_title": "Las pymes valencianas pueden optar a ayudas de 5,5 millones de euros por proyectos de I+D",
+        "article_url": "https://www.itespresso.es/pymes-valencianas-ayudas-imasd-244033.html",
+        "article_keywords": [
+            "pymes",
+            "investigaci\u00f3n desarrollo"
+        ],
+        "crawled_at": "2025-05-30 14:47:55"
+    },
+    {
+        "model": "gpt-4o-2024-11-20",
+        "run_id": "RUNID_2",
+        "task_name": "relevance_check_v0",
+        "article_id": "itespresso_20250530144755979997",
+        "relevance": 2,
+        "article_language": "es",
+        "source_name": "itespresso",
+        "article_title": "La guerra entre Israel y Gaza no acobarda a los inversores extranjeros de startups",
+        "article_url": "https://www.itespresso.es/guerra-israel-palestina-startups-244028.html",
+        "article_keywords": [
+            "Israel Gaza",
+            "startups"
+        ],
+        "crawled_at": "2025-05-30 14:47:55"
+    },
+    {
+        "model": "gpt-4o-2024-11-20",
+        "run_id": "RUNID_2",
+        "task_name": "relevance_check_v0",
+        "article_id": "techcrunch_20250530144755865850",
+        "relevance": 2,
+        "article_language": "en",
+        "source_name": "techcrunch",
+        "article_title": "Top 30 startups announced for VivaTech 2025 Innovation of the Year Award",
+        "article_url": "https://techcrunch.com/2025/05/29/top-30-startups-announced-for-vivatech-2025-innovation-of-the-year-award/",
+        "article_keywords": [
+            "Startups",
+            "Innovation"
+        ],
+        "crawled_at": "2025-05-30 14:47:55"
+    },
+    {
+        "model": "gpt-4o-2024-11-20",
+        "run_id": "RUNID_2",
+        "task_name": "relevance_check_v0",
+        "article_id": "itespresso_20250530144756072062",
+        "relevance": 2,
+        "article_language": "es",
+        "source_name": "itespresso",
+        "article_title": "Applivery obtiene 1 mill\u00f3n de euros de inversi\u00f3n",
+        "article_url": "https://www.itespresso.es/applivery-ronda-financiacion-243993.html",
+        "article_keywords": [
+            "Applivery",
+            "inversi\u00f3n expansi\u00f3n"
+        ],
+        "crawled_at": "2025-05-30 14:47:55"
+    },
+    {
+        "model": "gpt-4o-2024-11-20",
+        "run_id": "RUNID_2",
+        "task_name": "relevance_check_v0",
+        "article_id": "techcrunch_20250530144755896458",
+        "relevance": 2,
+        "article_language": "en",
+        "source_name": "techcrunch",
+        "article_title": "Black Forest Labs\u2019 Kontext AI models can edit pics as well as generate them",
+        "article_url": "https://techcrunch.com/2025/05/29/black-forest-labs-kontext-ai-models-can-edit-pics-as-well-as-generate-them/",
+        "article_keywords": [
+            "AI",
+            "Image Editing"
+        ],
+        "crawled_at": "2025-05-30 14:47:55"
+    },
+    {
+        "model": "gpt-4o-2024-11-20",
+        "run_id": "RUNID_2",
+        "task_name": "relevance_check_v0",
+        "article_id": "itespresso_20250530144756092640",
+        "relevance": 2,
+        "article_language": "es",
+        "source_name": "itespresso",
+        "article_title": "Por qu\u00e9 la menor presencia de mujeres es un problema para el sector tech espa\u00f1ol",
+        "article_url": "https://www.itespresso.es/mujeres-problema-sector-tech-espanol-174855.html",
+        "article_keywords": [
+            "mujeres sector tech",
+            "problemas representaci\u00f3n"
+        ],
+        "crawled_at": "2025-05-30 14:47:55"
+    },
+    {
+        "model": "gpt-4o-2024-11-20",
+        "run_id": "RUNID_2",
+        "task_name": "relevance_check_v0",
+        "article_id": "itespresso_20250530144755990211",
+        "relevance": 2,
+        "article_language": "es",
+        "source_name": "itespresso",
+        "article_title": "Navarra ya cuenta con m\u00e1s de 80 startups",
+        "article_url": "https://www.itespresso.es/navarra-startups-244020.html",
+        "article_keywords": [
+            "Navarra startups",
+            "salud agrotech"
+        ],
+        "crawled_at": "2025-05-30 14:47:55"
+    },
+    {
+        "model": "gpt-4o-2024-11-20",
+        "run_id": "RUNID_2",
+        "task_name": "relevance_check_v0",
+        "article_id": "techcrunch_20250530144755855637",
+        "relevance": 2,
+        "article_language": "en",
+        "source_name": "techcrunch",
+        "article_title": "Grammarly secures $1B in nondilutive funding from General Catalyst",
+        "article_url": "https://techcrunch.com/2025/05/29/grammarly-secures-1b-in-non-dilutive-funding-from-general-catalyst/",
+        "article_keywords": [
+            "AI",
+            "Funding"
+        ],
+        "crawled_at": "2025-05-30 14:47:55"
+    },
+    {
+        "model": "gpt-4o-2024-11-20",
+        "run_id": "RUNID_2",
+        "task_name": "relevance_check_v0",
+        "article_id": "itespresso_20250530144756021065",
+        "relevance": 2,
+        "article_language": "es",
+        "source_name": "itespresso",
+        "article_title": "10 errores que debes evitar en tus elevator pitch",
+        "article_url": "https://www.itespresso.es/errores-evitar-elevator-pitch-244012.html",
+        "article_keywords": [
+            "elevator pitch",
+            "errores"
+        ],
+        "crawled_at": "2025-05-30 14:47:55"
+    },
+    {
+        "model": "gpt-4o-2024-11-20",
+        "run_id": "RUNID_2",
+        "task_name": "relevance_check_v0",
+        "article_id": "itespresso_20250530144756031269",
+        "relevance": 2,
+        "article_language": "es",
+        "source_name": "itespresso",
+        "article_title": "Israel otorga a Intel una nueva subvenci\u00f3n por valor de 3.200 millones de d\u00f3lares",
+        "article_url": "https://www.itespresso.es/israel-subvencion-intel-244008.html",
+        "article_keywords": [
+            "Israel",
+            "Intel subvenci\u00f3n"
+        ],
+        "crawled_at": "2025-05-30 14:47:55"
+    },
+    {
+        "model": "gpt-4o-2024-11-20",
+        "run_id": "RUNID_2",
+        "task_name": "relevance_check_v0",
+        "article_id": "the_next_web_20250530144755804588",
+        "relevance": 2,
+        "article_language": "en",
+        "source_name": "the_next_web",
+        "article_title": "Opinion: Europe must warm up to geothermal before it\u2019s too late",
+        "article_url": "https://thenextweb.com/news/europe-geothermal-energy",
+        "article_keywords": [
+            "Geothermal",
+            "Energy",
+            "Europe"
+        ],
+        "crawled_at": "2025-05-30 14:47:55"
+    },
+    {
+        "model": "gpt-4o-2024-11-20",
+        "run_id": "RUNID_2",
+        "task_name": "relevance_check_v0",
+        "article_id": "itespresso_20250530144756000513",
+        "relevance": 2,
+        "article_language": "es",
+        "source_name": "itespresso",
+        "article_title": "Las startups valencianas progresaron adecuadamente en 2023",
+        "article_url": "https://www.itespresso.es/startups-valencianas-244017.html",
+        "article_keywords": [
+            "Valencia startups",
+            "inversi\u00f3n 2023"
+        ],
+        "crawled_at": "2025-05-30 14:47:55"
+    },
+    {
+        "model": "gpt-4o-2024-11-20",
+        "run_id": "RUNID_2",
+        "task_name": "relevance_check_v0",
+        "article_id": "itespresso_20250530144756010875",
+        "relevance": 2,
+        "article_language": "es",
+        "source_name": "itespresso",
+        "article_title": "El New York Times acusa a Open AI y Microsoft de infringir sus derechos de autor",
+        "article_url": "https://www.itespresso.es/new-york-times-demanda-open-ai-microsoft-244022.html",
+        "article_keywords": [
+            "Open AI Microsoft",
+            "derechos autor"
+        ],
+        "crawled_at": "2025-05-30 14:47:55"
+    },
+    {
+        "model": "gpt-4o-2024-11-20",
+        "run_id": "RUNID_2",
+        "task_name": "relevance_check_v0",
+        "article_id": "techcrunch_20250530144755876042",
+        "relevance": 2,
+        "article_language": "en",
+        "source_name": "techcrunch",
+        "article_title": "Inside the AI revolution: Top insights and breakthroughs from our partners at TechCrunch Sessions: AI",
+        "article_url": "https://techcrunch.com/2025/05/29/inside-the-ai-revolution-top-insights-and-breakthroughs-from-our-partners-at-techcrunch-sessions-ai/",
+        "article_keywords": [
+            "AI",
+            "Technology"
+        ],
+        "crawled_at": "2025-05-30 14:47:55"
+    },
+    {
+        "model": "gpt-4o-2024-11-20",
+        "run_id": "RUNID_2",
+        "task_name": "relevance_check_v0",
+        "article_id": "itespresso_20250530144756102949",
+        "relevance": 2,
+        "article_language": "es",
+        "source_name": "itespresso",
+        "article_title": "La incipiente escena startup de Portugal y su papel en la recuperaci\u00f3n econ\u00f3mica",
+        "article_url": "https://www.itespresso.es/portugal-startup-173661.html",
+        "article_keywords": [
+            "Portugal startups",
+            "econom\u00eda recuperaci\u00f3n"
+        ],
+        "crawled_at": "2025-05-30 14:47:55"
+    },
+    {
+        "model": "gpt-4o-2024-11-20",
+        "run_id": "RUNID_2",
+        "task_name": "relevance_check_v0",
+        "article_id": "business_insider_20250530144756123640",
+        "relevance": 2,
+        "article_language": "es",
+        "source_name": "business_insider",
+        "article_title": "El CEO de Anthropic advierte de que la IA podr\u00eda eliminar la mitad de los empleos de oficina",
+        "article_url": "https://www.businessinsider.es/tecnologia/ceo-anthropic-advierte-ia-podria-eliminar-mitad-empleos-oficina-1464068",
+        "article_keywords": [
+            "IA",
+            "trabajo"
+        ],
+        "crawled_at": "2025-05-30 14:47:55"
+    },
+    {
+        "model": "gpt-4o-2024-11-20",
+        "run_id": "RUNID_2",
+        "task_name": "relevance_check_v0",
+        "article_id": "business_insider_20250530144756164949",
+        "relevance": 2,
+        "article_language": "es",
+        "source_name": "business_insider",
+        "article_title": "As\u00ed est\u00e1n convirtiendo la ansiedad por la IA en una ventaja los equipos de contrataci\u00f3n",
+        "article_url": "https://www.businessinsider.es/tecnologia/estan-convirtiendo-ansiedad-ia-ventaja-equipos-contratacion-1459114",
+        "article_keywords": [
+            "IA",
+            "trabajo"
+        ],
+        "crawled_at": "2025-05-30 14:47:55"
+    },
+    {
+        "model": "gpt-4o-2024-11-20",
+        "run_id": "RUNID_2",
+        "task_name": "relevance_check_v0",
+        "article_id": "business_insider_20250530144756133921",
+        "relevance": 2,
+        "article_language": "es",
+        "source_name": "business_insider",
+        "article_title": "'The New York Times' permitir\u00e1 a Amazon usar sus art\u00edculos para entrenar modelos de IA",
+        "article_url": "https://www.businessinsider.es/tecnologia/new-york-times-permitira-amazon-usar-articulos-entrenar-modelos-ia-1464159",
+        "article_keywords": [
+            "Amazon",
+            "IA"
+        ],
+        "crawled_at": "2025-05-30 14:47:55"
+    },
+    {
+        "model": "gpt-4o-2024-11-20",
+        "run_id": "RUNID_2",
+        "task_name": "relevance_check_v0",
+        "article_id": "business_insider_20250530144756154666",
+        "relevance": 2,
+        "article_language": "es",
+        "source_name": "business_insider",
+        "article_title": "Las 3 conclusiones de los resultados de Nvidia: China, China y China",
+        "article_url": "https://www.businessinsider.es/tecnologia/3-conclusiones-resultados-nvidia-china-china-china-1464041",
+        "article_keywords": [
+            "Nvidia",
+            "China"
+        ],
+        "crawled_at": "2025-05-30 14:47:55"
+    }
+]

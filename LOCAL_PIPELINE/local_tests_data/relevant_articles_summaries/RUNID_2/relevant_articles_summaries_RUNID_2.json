@@ -1,0 +1,149 @@
+[
+    {
+        "model": "gpt-4o-2024-11-20",
+        "summary": "Grammarly has secured a $1 billion commitment from General Catalyst's Customer Value Fund (CVF) to fuel sales, marketing, and potential acquisitions, marking a shift from traditional venture investment structures. This financing is nondilutive, allowing Grammarly to repay the capital with a capped percentage of revenue generated through the funding, preserving its existing valuation. The move aligns with CVF\u2019s strategy to support late-stage startups with predictable revenue streams by providing alternative capital solutions tied to recurring revenue. \n\nThe funding comes as Grammarly transitions from a writing assistant to an AI productivity tool, following its acquisition of Coda and annual revenues exceeding $700 million. For business leaders, this underscores the growing attractiveness of predictable-revenue companies for innovative financing models, enabling acceleration without dilution or valuation disruption amid challenging market conditions.",
+        "article_id": "techcrunch_20250530144755855637",
+        "run_id": "RUNID_2",
+        "task_name": "article_summarization_v0"
+    },
+    {
+        "model": "gpt-4o-2024-11-20",
+        "summary": "TechCrunch Sessions: AI highlights the latest trends, innovations, and applications in artificial intelligence, bringing together experts, startups, and investors to explore its industry-transforming potential. Key sessions include discussions on AI as a co-founder for startups, AI-powered workflows in automotive repair, scalable generative AI development with MySQL HeatWave, collaborative AI agents for teamwork, and SAP\u2019s integration of AI in enterprise solutions. \n\nThese talks provide actionable insights on leveraging AI to drive efficiency, innovation, and growth, making them crucial for professionals aiming to adapt to the evolving AI landscape. The event offers opportunities for hands-on learning, networking with industry leaders, and exploring cutting-edge AI implementations that can shape future business strategies.",
+        "article_id": "techcrunch_20250530144755876042",
+        "run_id": "RUNID_2",
+        "task_name": "article_summarization_v0"
+    },
+    {
+        "model": "gpt-4o-2024-11-20",
+        "summary": "The Innovation of the Year Award at VivaTech 2025 celebrates the most groundbreaking startups that are redefining industries. The competition, open to all exhibiting startups, focuses on innovation, market disruption, and scalability. Finalists are set to pitch live at VivaTech, with the winner receiving prominent opportunities, including a Startup Corner at VivaTech 2026 and entry into the prestigious TechCrunch Startup Battlefield 200.\n\nNotable innovations from this year's top 30 startups include self-driving guide glasses, photonic chips for computing, carbon sink technologies, microrobotic space explorers, and bioelectronic implants for brain cancer treatment. These teams are advancing sustainability, human-machine interface technologies, and accessible healthcare, showcasing bold vision and transformative ideas. Professionals should watch these startups closely as they represent the cutting edge of science, technology, and engineering, poised to shape future industries.",
+        "article_id": "techcrunch_20250530144755865850",
+        "run_id": "RUNID_2",
+        "task_name": "article_summarization_v0"
+    },
+    {
+        "model": "gpt-4o-2024-11-20",
+        "summary": "As artificial intelligence (AI) gains traction across industries, many companies are eager to leverage it for increased productivity, yet challenges remain in fully realizing its potential. Research suggests that while AI cannot replace skilled workers, those adept at using AI tools will have a competitive edge. Professionals must embrace continuous learning to stay relevant in evolving business landscapes.\n\nFor HR and talent acquisition, AI offers tangible benefits by streamlining repetitive tasks such as resume summaries and job description drafting, allowing HR leaders to prioritize strategic initiatives. Responsible AI adoption is key, requiring businesses to align tools with company values and conduct rigorous evaluations for compliance and fairness. Furthermore, measuring AI's long-term impact on metrics like candidate quality, retention, and satisfaction remains essential for sustained success.\n\nUltimately, adopting AI thoughtfully empowers organizations to enhance hiring processes, increase efficiency, and remain competitive in dynamic markets. Professionals and business leaders who integrate AI capabilities effectively are well-positioned to achieve significant workplace advantages.",
+        "article_id": "business_insider_20250530144756164949",
+        "run_id": "RUNID_2",
+        "task_name": "article_summarization_v0"
+    },
+    {
+        "model": "gpt-4o-2024-11-20",
+        "summary": "An effective elevator pitch is a critical tool for startups to succinctly and persuasively communicate their value to potential investors, clients, or partners. This brief presentation should focus on key information and benefits, tailored to the audience, within 30 seconds to 2 minutes. Common pitfalls can undermine its impact, including failing to know the audience, delving into excessive details, or neglecting to explain how the product or service solves a problem.\n\nTo avoid mistakes, entrepreneurs should keep their pitch clear, emphasize benefits, avoid jargon, rehearse thoroughly, and include a strong call to action. Additionally, delivery should be confident and natural, avoiding overly mechanical or nervous presentations. Staying relevant and specific while showcasing the unique value of the startup ensures the pitch resonates with its audience. For business leaders, mastering the elevator pitch is vital for building credibility, generating interest, and advancing key professional or business objectives.",
+        "article_id": "itespresso_20250530144756021065",
+        "run_id": "RUNID_2",
+        "task_name": "article_summarization_v0"
+    },
+    {
+        "model": "gpt-4o-2024-11-20",
+        "summary": "Europe\u2019s transition to clean energy has overlooked geothermal energy, a reliable and proven source of local, always-on power. Despite its potential to meet both electricity and heating needs, geothermal only accounted for 0.2% of power generation in 2024. The resource has significant advantages, including smaller land requirements, local sourcing of materials, and the ability to repurpose oil and gas industry expertise and infrastructure. \n\nUnlike emerging technologies like nuclear fusion, geothermal is ready for deployment now but suffers from minimal investment and regulatory barriers. Startups are making progress in reducing drilling costs, which historically have been a major challenge. To achieve energy security and climate neutrality, Europe must invest boldly in geothermal and consider it as a cornerstone of its clean energy strategy. Failing to act risks grid instability, missed climate goals, and continued reliance on energy imports.",
+        "article_id": "the_next_web_20250530144755804588",
+        "run_id": "RUNID_2",
+        "task_name": "article_summarization_v0"
+    },
+    {
+        "model": "gpt-4o-2024-11-20",
+        "summary": "Apple, in collaboration with Columbia University, has developed a large language model (LLM) called Ferret, specifically designed for research purposes. Launched in October with open-source code and weights, Ferret reflects Apple\u2019s growing capabilities in generative AI, an area where it has remained relatively discreet. Recent advancements announced by Apple demonstrate progress in integrating LLM technology into iPhones and iPads, enabling efficient inference and enhanced immersive experiences, such as 3D avatars.\n\nAlthough Ferret lacks a commercial license, the tech community has shown enthusiasm for Apple's unexpected move toward open-source AI, given its reputation for proprietary software. This development signals Apple's expanding role in multimodal AI and its potential to impact consumer devices with local large language models. For professionals, this showcases the transformative possibilities of AI-powered hardware and highlights Apple's growing influence in the AI research space.",
+        "article_id": "itespresso_20250530144756051666",
+        "run_id": "RUNID_2",
+        "task_name": "article_summarization_v0"
+    },
+    {
+        "model": "gpt-4o-2024-11-20",
+        "summary": "The New York Times has announced a licensing agreement allowing Amazon to use its editorial content to train artificial intelligence models, marking a significant partnership between a well-known media company and a technology giant. Under the multi-year contract, Amazon will access content from The New York Times, NYT Cooking, and The Athletic for use in real-time summaries on platforms like Alexa and for training foundational AI models. \n\nThis development highlights shifting dynamics in media rights amid growing demand for AI training data. Notably, The New York Times has previously pursued legal action against tech companies like Microsoft and OpenAI for allegedly infringing copyrights, underscoring broader tensions in the industry around the use of proprietary content in AI systems. For business leaders, this signals an evolving landscape where intellectual property considerations and strategic partnerships are becoming critical to navigating AI innovations responsibly.",
+        "article_id": "business_insider_20250530144756133921",
+        "run_id": "RUNID_2",
+        "task_name": "article_summarization_v0"
+    },
+    {
+        "model": "gpt-4o-2024-11-20",
+        "summary": "Intel has secured a $3.2 billion grant from the Israeli government to support the construction of a $25 billion semiconductor factory in southern Israel, marking the largest investment ever made by a private company in the country. This project is an extension of Intel's 2019 announcement to expand its presence in Israel and is part of broader efforts to strengthen its global supply chain alongside investments in Europe and the U.S. The new plant is expected to create thousands of jobs and begin operations in 2028, while Intel commits to purchasing $15 billion in goods and services from Israeli suppliers over the next decade. \n\nThis deal highlights the growing significance of local semiconductor production amid geopolitical and supply chain challenges. For business leaders, the move underscores the strategic importance of securing funding for large-scale investments that drive innovation, economic impact, and cross-border collaboration.",
+        "article_id": "itespresso_20250530144756031269",
+        "run_id": "RUNID_2",
+        "task_name": "article_summarization_v0"
+    },
+    {
+        "model": "gpt-4o-2024-11-20",
+        "summary": "The New York Times has filed a lawsuit against Open AI and Microsoft, alleging that the companies infringed on its copyright by using millions of its articles to train their AI models, including ChatGPT and Copilot. The newspaper claims these AI systems can generate outputs that replicate its content verbatim, mimic its style, and undermine its ability to monetize and protect its journalism. The lawsuit calls for \"billions of dollars\" in damages and seeks the removal of its content from the companies' AI training datasets. \n\nThis case highlights the growing tension between media organizations and technology companies over intellectual property rights in the era of generative AI. While some entities like Axel Springer and Associated Press have opted for licensing agreements, disputes like this underscore the urgent need for clearer guidelines on how AI systems can ethically and legally source training data. For business leaders, this serves as a reminder of the critical importance of safeguarding proprietary content and navigating emerging challenges in AI-driven industries.",
+        "article_id": "itespresso_20250530144756010875",
+        "run_id": "RUNID_2",
+        "task_name": "article_summarization_v0"
+    },
+    {
+        "model": "gpt-4o-2024-11-20",
+        "summary": "Applivery, a Madrid-based SaaS platform specializing in unified management of corporate Android and iPhone devices, has secured \u20ac1 million in seed funding, supported by investors Pedro Tortosa (Peak Thomas) and Lead Angels by Intelectium. The funding will enable the company to strengthen its position in the Spanish market, expand its commercial team, and enhance its capabilities in device management and cybersecurity. Applivery caters to businesses of all sizes, offering solutions that ensure data security and employee efficiency.\n\nThis investment marks a strategic step in the company\u2019s ambition to become a leading device management platform in Europe and scale internationally. Applivery\u2019s focus on simplicity, scalability, and leveraging cloud-based solutions positions it as a competitive player in the market. Business leaders can gain insights into how SaaS platforms are addressing the growing need for secure and efficient device management in today\u2019s digital ecosystem.",
+        "article_id": "itespresso_20250530144756072062",
+        "run_id": "RUNID_2",
+        "task_name": "article_summarization_v0"
+    },
+    {
+        "model": "gpt-4o-2024-11-20",
+        "summary": "Hugging Face has announced the release of two open-source humanoid robots, HopeJR and Reachy Mini, marking its continued expansion into robotics. HopeJR is a full-sized humanoid robot with 66 degrees of freedom, capable of walking and object manipulation, priced at approximately $3,000, while Reachy Mini is a desktop-sized unit designed for AI testing and interaction, priced between $250 and $300. Both robots aim to lower barriers in robotics by being affordable and open-source, allowing users to assemble, modify, and understand their functionality.\n\nThese releases were enabled by Hugging Face's acquisition of Pollen Robotics, providing the expertise needed to develop these systems, alongside its LeRobot platform, which houses models and tools for robotics solutions. For business leaders and professionals, this development underscores the democratization of robotics, providing accessible platforms for innovation and reducing reliance on proprietary, black-box technologies from major corporations.",
+        "article_id": "techcrunch_20250530144755886209",
+        "run_id": "RUNID_2",
+        "task_name": "article_summarization_v0"
+    },
+    {
+        "model": "gpt-4o-2024-11-20",
+        "summary": "Valencia has emerged as a significant startup hub, attracting \u20ac30 million in investment during the first half of 2023, making it the third-ranked city in Spain for funding. The city's innovation ecosystem, led by Startup Valencia, has experienced 14% annual growth, with over 400 members and 350 startups\u2014a 20% increase compared to 2022. Additionally, the Valencia Digital Summit has played a key role in internationalizing the community, expanding it by 47% to over 35,000 participants.\n\nValencia's startup ecosystem saw a 44.6% increase in investment compared to declines in Barcelona (-48%) and Madrid, highlighting its rapid development. According to the Global Startup Ecosystem Report 2023, Valencia climbed 22 spots globally, now ranking 122nd among entrepreneurial cities. These metrics underscore the city's growing influence and opportunities for professionals and businesses looking to capitalize on its dynamic innovation sector.",
+        "article_id": "itespresso_20250530144756000513",
+        "run_id": "RUNID_2",
+        "task_name": "article_summarization_v0"
+    },
+    {
+        "model": "gpt-4o-2024-11-20",
+        "summary": "Black Forest Labs has unveiled *Flux.1 Kontext*, a new suite of state-of-the-art AI image-generating models capable of both creating and editing images using text prompts and optional reference images. The models\u2014split into *Kontext [pro]* and *Kontext [max]*\u2014offer advanced capabilities such as photorealistic rendering, strong prompt adherence, and multi-turn refinements, with speeds up to eight times faster than leading competitors. While the models are not available for offline use, the company has launched an \"open\" version, *Kontext [dev]*, for research and safety testing, along with a public model playground for hands-on user trials.  \n\nThis release highlights accelerating competition in generative AI across major players like Google and OpenAI, with significant implications for industries leveraging design, marketing, and creative content production. Business leaders and professionals can benefit from faster, more customizable tools for high-quality visual asset creation, offering potential efficiencies and innovation opportunities.",
+        "article_id": "techcrunch_20250530144755896458",
+        "run_id": "RUNID_2",
+        "task_name": "article_summarization_v0"
+    },
+    {
+        "model": "gpt-4o-2024-11-20",
+        "summary": "The CEO of Anthropic, Dario Amodei, has warned that artificial intelligence (AI) may eliminate up to 50% of entry-level office jobs within five years, with unemployment potentially rising by 10%\u201320%. He emphasized the rapid progress of AI models, which are beginning to outperform human capabilities, and urged governments and AI companies to stop downplaying the risks of widespread job displacement in sectors like tech, finance, and consulting. A report from SignalFire supports this concern, showing that hiring for entry-level roles in technology has significantly declined, partly due to the adoption of AI.\n\nAmodei's comments highlight a shift in hiring patterns as companies increasingly prioritize experienced professionals who leverage AI tools to handle both senior and junior tasks efficiently. This trend underscores the need for early-career professionals to adapt quickly, improve their skills, and integrate AI into their workflows to remain competitive. For business leaders, the message is clear: navigating this transition will require strategic investments in workforce development and an honest assessment of AI's potential disruptions to labor markets.",
+        "article_id": "business_insider_20250530144756123640",
+        "run_id": "RUNID_2",
+        "task_name": "article_summarization_v0"
+    },
+    {
+        "model": "gpt-4o-2024-11-20",
+        "summary": "Navarra's entrepreneurial ecosystem is gaining recognition for its focus on health and agrotech sectors, with over 100 identified tech companies, including 13 scaleups generating more than \u20ac1 million annually. The region hosts more than 80 startups, primarily under five years old, with agrotech (12%) and health (15.22%) emerging as key verticals. Additional industries such as biotech, energy, and foodtech collectively represent significant portions of the ecosystem.\n\nIn the past eight years, Navarra-based tech companies have attracted \u20ac32 million through 34 investment deals, with an average ticket of \u20ac945,000 per startup. Standout firms include Veridas (\u20ac19M raised for biometric SaaS solutions), Telum Therapeutics (\u20ac4.1M in biotech), and Plastic Repair System (\u20ac4M). These milestones highlight Navarra's growing appeal to investors and underscore its potential for innovation in niche sectors.\n\nProfessionals and business leaders can gain insights from Navarra\u2019s strategic sectoral focus and its ability to attract substantial funding, offering a model for cultivating regional innovation hubs.",
+        "article_id": "itespresso_20250530144755990211",
+        "run_id": "RUNID_2",
+        "task_name": "article_summarization_v0"
+    },
+    {
+        "model": "gpt-4o-2024-11-20",
+        "summary": "The article examines the persistent gender gap and lack of female representation in the technology sector, highlighting a range of barriers such as societal stereotypes, unconscious bias, and structural obstacles like the \"glass ceiling.\" Despite women constituting half of the active population, they account for only about a third of technology workers globally, with even lower figures in higher leadership roles. Key insights include that only 18% of technology professionals in Spain are women and studies show systemic bias in hiring practices, where identical resumes are perceived differently based on gender.\n\nThis matters to professionals and business leaders because addressing gender inequity in technology is both a social justice imperative and a strategic business opportunity. Studies show diverse teams outperform homogeneous ones, and increasing female representation could unlock significant economic gains\u2014potentially \u20ac9 billion annually in the EU. Initiatives like mentoring programs, curriculum reform, and corporate strategies for diversity in hiring are critical steps to bridging this gap and fostering talent inclusivity. For long-term progress, collaboration between education systems, corporations, and policymakers is indispensable.",
+        "article_id": "itespresso_20250530144756092640",
+        "run_id": "RUNID_2",
+        "task_name": "article_summarization_v0"
+    },
+    {
+        "model": "gpt-4o-2024-11-20",
+        "summary": "Despite ongoing conflict in Gaza and its impact on daily life in Israel, the country's startups raised approximately $1.5 billion in funding during Q4 2023, only 15% lower than the previous quarter, according to IVC and LeumiTech. The quarter saw 75 deals, predominantly in early-stage funding rounds, signaling resilience in Israel's high-tech sector. For the entire year, startups raised about $7 billion, a significant drop from $16 billion in 2022, attributed to economic slowdown and concerns over earlier political judicial reform plans.\n\nForeign investor interest remains strong, with external funding increasing in Q4 following earlier declines, underscoring the global appeal of Israeli tech startups even amid geopolitical tensions. High-tech exports are vital to Israel's economy, accounting for over half of exports and 12% of national employment, though 15% of its tech workforce has been mobilized for military service. Professionals and business leaders may view these figures as evidence of the enduring robustness and economic significance of Israel's technology sector during challenging times.",
+        "article_id": "itespresso_20250530144755979997",
+        "run_id": "RUNID_2",
+        "task_name": "article_summarization_v0"
+    },
+    {
+        "model": "gpt-4o-2024-11-20",
+        "summary": "Portugal has emerged as a promising hub for entrepreneurship and innovation in Southern Europe, driven by a thriving startup ecosystem. This revival follows a decade-long economic recovery after the global financial crisis, with startups contributing significantly to job creation\u201446% of new roles now come from companies under five years old\u2014and accounting for 16% of Portugal's exports in 2014. Initiatives like StartUp Portugal and events such as the Web Summit have positioned Lisbon as a focal point, while other cities like Porto and Braga show growth in sectors such as Industry 4.0, medtech, and fashion tech.\n\nDespite its progress, Portugal's startup ecosystem still faces challenges in accessing late-stage funding, overcoming regulatory barriers, and achieving critical mass to match mature hubs like London or Berlin. The government supports growth with tax incentives and funding programs, such as the \u20ac200M co-investment fund, while promoting talent through Visa Startup initiatives. For professionals and business leaders, Portugal presents an attractive environment for innovation, with compelling advantages like skilled talent, strategic location, and proactive government support, making it a rising player in the global entrepreneurial landscape.",
+        "article_id": "itespresso_20250530144756102949",
+        "run_id": "RUNID_2",
+        "task_name": "article_summarization_v0"
+    },
+    {
+        "model": "gpt-4o-2024-11-20",
+        "summary": "The Instituto Valenciano de Competitividad Empresarial (Ivace) has announced \u20ac5.5 million in funding to support small and medium-sized enterprises (SMEs) in developing research and development (R&D) projects. These grants, part of the Plan de I+D+i Empresarial, aim to advance scientific or technological knowledge through initiatives either led by SMEs individually or in collaboration with larger companies. Ivace offers up to 60% coverage for project-related expenses, including research personnel, consultancy services, materials, equipment, and intellectual property acquisitions.\n\nSignificantly, the program will allow eligible firms to receive up to 75% of the subsidy upfront, subject to a 25% guarantee, to address common financial barriers. Startups and innovative companies with less than five years of existence, as well as SME-led consortia, can apply. A key requirement is adherence to the European principle of \"Do No Significant Harm\" to the environment. Applications are open from January 9 to February 22, 2024.\n\nThis initiative matters to professionals as it promotes long-term innovation, competitiveness, and sustainable growth within the business sector, enabling companies to remain at the forefront of technological advancements.",
+        "article_id": "itespresso_20250530144755969786",
+        "run_id": "RUNID_2",
+        "task_name": "article_summarization_v0"
+    },
+    {
+        "model": "gpt-4o-2024-11-20",
+        "summary": "Nvidia's CEO, Jensen Huang, addressed the significant impact of U.S. export restrictions on its H20 chips to China during the company's earnings report. Despite losing access to China's $50 billion AI market, Nvidia achieved $44.06 billion in revenue for the quarter, surpassing Wall Street's forecast. While these restrictions led to a $4.5 billion depreciation and are expected to cause $8 billion in lost revenue next quarter, Nvidia's strong performance in the data center segment, with a 73% year-over-year growth, has bolstered investor confidence.\n\nHuang emphasized the strategic importance of China's AI ecosystem, home to half of the world's AI researchers, while criticizing export controls as hampering U.S. competitiveness globally. At the same time, he expressed support for former President Trump's manufacturing and trade policies. Nvidia plans to mitigate risks by expanding its presence in other regions, notably Europe, to forge new AI infrastructure projects. This case underscores the complex interplay between geopolitics and the global semiconductor industry, affecting business leaders navigating international markets and supply chain dependencies.",
+        "article_id": "business_insider_20250530144756154666",
+        "run_id": "RUNID_2",
+        "task_name": "article_summarization_v0"
+    }
+]
