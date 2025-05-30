@@ -1,1 +1,10 @@
+# Ignore Python bytecode files
+__pycache__/
+*.py[cod]
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+# Ignore environment files
 .env
+# Ignore .jsonl files
+*.jsonl
+./local_tests_data/
