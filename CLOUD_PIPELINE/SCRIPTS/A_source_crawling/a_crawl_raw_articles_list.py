@@ -8,7 +8,7 @@ from dotenv import load_dotenv
 from azure.storage.blob import BlobServiceClient
 import sys
 
-load_dotenv('../.env')
+load_dotenv('/home/xavaki/DAMM/linkedin_gen_contents/.env')
 
 def get_run_id():
     return os.getenv('RUNID')
@@ -57,7 +57,7 @@ def main(RUNID):
         )
 
     sources = get_sources()
-    print(sources)
+    # print(sources)a
 
     def fetch_source_content(source: Source) -> str:
         source_url_jina = 'https://r.jina.ai/' + source.url

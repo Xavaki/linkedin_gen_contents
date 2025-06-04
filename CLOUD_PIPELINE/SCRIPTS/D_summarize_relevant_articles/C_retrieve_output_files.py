@@ -5,9 +5,9 @@ import os
 from azure.storage.blob import BlobServiceClient
 import sys
 
-load_dotenv('../.env')
+load_dotenv('/home/xavaki/DAMM/linkedin_gen_contents/.env')
 
-TASK_NAME = "relevance_check_v0"
+TASK_NAME = "article_summarization_v0"
 
 def get_run_id():
     return os.getenv('RUNID')
@@ -57,22 +57,43 @@ def main(RUNID):
         error_blob.upload_blob(error, overwrite=True)
         print(f"Error saved to {error_filename}")
 
+    run_batch_statuses = []
     for batch_id, i in batchids:
         batch_obj = client.batches.retrieve(batch_id)
         batch_status = batch_obj.status
         if batch_status != "completed":
             print(f"Batch {batch_id} is not completed. Status: {batch_status}")
+            run_batch_statuses.append((batch_id, "running"))
             continue
+
         output_file_id = batch_obj.output_file_id
         if output_file_id:
             output = client.files.content(output_file_id).text.strip()
             if output:
                 save_output_file(i, output)
+                run_batch_statuses.append((batch_id, "completed"))
+
         error_file_id = batch_obj.error_file_id
         if error_file_id:
             error_content = client.files.content(error_file_id).text.strip()
             if error_content:
                 save_error_file(i, error_content)
+                run_batch_statuses.append((batch_id, "error"))
+
+    running_batches = [status for status in run_batch_statuses if status[1] == "running"]
+    if running_batches:
+        print(f"Some batches are still running: {running_batches}")
+        wait_time = 120*len(running_batches)
+        return { "status" : "WAIT", "wait_time" : wait_time }
+    
+    errored_batches = [status for status in run_batch_statuses if status[1] == "error"]
+    if len(errored_batches) == len(run_batch_statuses):
+        print("All batches have errors.")
+        return { "status" : "ALL_ERROR_END" }
+    
+    else:
+        print("All batches completed successfully or with some errors.")
+        return { "status" : "ALL_COMPLETED_CONTINUE"}
 
 if __name__ == "__main__":
     RUNID = sys.argv[1]

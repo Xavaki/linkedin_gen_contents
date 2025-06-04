@@ -12,7 +12,7 @@ from azure.storage.blob import BlobServiceClient
 import sys
 
 # Load environment variables
-load_dotenv('../.env')
+load_dotenv('/home/xavaki/DAMM/linkedin_gen_contents/.env')
 
 # Define constants
 TASK_NAME = "source_parsing_v0"

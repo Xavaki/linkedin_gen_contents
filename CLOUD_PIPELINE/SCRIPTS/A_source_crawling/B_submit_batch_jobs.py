@@ -5,7 +5,7 @@ from datetime import datetime
 from azure.storage.blob import BlobServiceClient
 import sys
 
-load_dotenv('../.env')
+load_dotenv('/home/xavaki/DAMM/linkedin_gen_contents/.env')
 
 TASK_NAME = "source_parsing_v0"
 

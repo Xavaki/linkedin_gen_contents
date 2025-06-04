@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 from azure.storage.blob import BlobServiceClient
 import sys
 
-load_dotenv('../.env')
+load_dotenv('/home/xavaki/DAMM/linkedin_gen_contents/.env')
 
 TASK_NAME = "source_parsing_v0"
 DEPLOYMENT_NAME = "gpt-4o--batch-2"

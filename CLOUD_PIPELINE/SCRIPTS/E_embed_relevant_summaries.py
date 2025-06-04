@@ -8,7 +8,7 @@ from datetime import datetime
 from azure.storage.blob import BlobServiceClient
 import sys
 
-load_dotenv('./.env')
+load_dotenv('/home/xavaki/DAMM/linkedin_gen_contents/.env')
 
 def get_run_id():
     return os.getenv('RUNID')
@@ -92,6 +92,8 @@ def main(RUNID):
         print(f"Relevant articles content saved to blob storage as {output_blob_name}")
 
     save_embeddings()
+
+    return True
 
 if __name__ == "__main__":
     RUNID = sys.argv[1]
