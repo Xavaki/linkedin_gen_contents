@@ -30,16 +30,13 @@ def main(RUNID: str):
             sleep(wait_time)
 
         elif status == "ALL_ERROR_END":
-            return False
+            raise Exception(f"All batch jobs for {TASK_NAME} ended with errors.")
         
         elif status == "ALL_COMPLETED_CONTINUE":
             break
     
     print("Batch jobs completed. Processing outputs...")
     process_outputs(RUNID)
-
-    return True
-
 
 if __name__ == "__main__":
     ...

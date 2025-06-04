@@ -1,0 +1,6 @@
+README.md
+setup.py
+linkedin_gen_contents.egg-info/PKG-INFO
+linkedin_gen_contents.egg-info/SOURCES.txt
+linkedin_gen_contents.egg-info/dependency_links.txt
+linkedin_gen_contents.egg-info/top_level.txt
