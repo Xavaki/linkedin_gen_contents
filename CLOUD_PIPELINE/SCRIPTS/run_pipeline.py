@@ -12,6 +12,10 @@ from CLOUD_PIPELINE.SCRIPTS.E_embed_relevant_summaries import main as embed_rele
 
 from dotenv import load_dotenv
 
+from datetime import datetime
+import time 
+
+
 load_dotenv('/home/xavaki/DAMM/linkedin_gen_contents/.env')
 
 def main(RUNID: str):
@@ -46,6 +50,8 @@ def main(RUNID: str):
 
 if __name__ == "__main__":
 
+    run_location = sys.argv[1] if len(sys.argv) > 1 else "local"
+
     blob_service_client = BlobServiceClient.from_connection_string(os.getenv("STORAGE_ACCOUNT_CONNECTION_STRING"))
     runs_metadata_blob = blob_service_client.get_blob_client(container="runs-metadata", blob="runs_metadata.json")
     runs_metadata = json.loads(runs_metadata_blob.download_blob().readall())
@@ -55,13 +61,20 @@ if __name__ == "__main__":
 
     print("RUNID", next_run_id)
 
+    start_time = time.time()
     pipeline_success, failed_step, error = main(next_run_id)
+    run_duration = time.time() - start_time
+
+    pipeline_finish_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
     if pipeline_success:
         print("Pipeline completed successfully for RUNID: {}".format(next_run_id))
         runs_metadata.append({
             "RUNID": next_run_id,
             "status": "success",
+            "run_location": run_location,
+            "run_duration": run_duration,
+            "pipeline_finish_time": pipeline_finish_time
         })
         runs_metadata_blob.upload_blob(json.dumps(runs_metadata), overwrite=True)
     else:
@@ -70,7 +83,10 @@ if __name__ == "__main__":
             "RUNID": next_run_id,
             "status": "failed",
             "failed_step": failed_step,
-            "error": str(error)
+            "error": str(error),
+            "run_location": run_location,
+            "run_duration": run_duration,
+            "pipeline_finish_time": pipeline_finish_time
         })
         runs_metadata_blob.upload_blob(json.dumps(runs_metadata), overwrite=True)
 
