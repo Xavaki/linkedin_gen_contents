@@ -10,9 +10,6 @@ import sys
 
 load_dotenv('/home/xavaki/DAMM/linkedin_gen_contents/.env')
 
-def get_run_id():
-    return os.getenv('RUNID')
-
 
 def main(RUNID):
 
@@ -40,8 +37,6 @@ def main(RUNID):
     relevant_articles_list = read_relevant_articles_list()
     # print(relevant_articles_list)
 
-    articles_content = []
-
     for relevant_article in relevant_articles_list:
         url = relevant_article["article_url"]
         article_id = relevant_article["article_id"]
@@ -61,15 +56,8 @@ def main(RUNID):
             print(f"Skipping {url} due to empty content")
             continue
 
-        articles_content.append({'article_id': article_id, 'content': content, 'title': title, 'publish_date': publish_date})
-
-    def save_articles_content():
-        output_blob_name = f"{RUNID}--relevant_articles_content.json"
-        output_blob_client = output_container.get_blob_client(output_blob_name)
-        output_blob_client.upload_blob(json.dumps(articles_content, indent=4), overwrite=True)
-        print(f"Relevant articles content saved to blob storage as {output_blob_name}")
-
-    save_articles_content()
+        article_content_json = json.dumps({'article_id': article_id, 'content': content, 'title': title, 'publish_date': publish_date}, indent=4)
+        output_container.get_blob_client(RUNID + "/" + article_id + ".json").upload_blob(article_content_json, overwrite=True)
 
     return True
 
