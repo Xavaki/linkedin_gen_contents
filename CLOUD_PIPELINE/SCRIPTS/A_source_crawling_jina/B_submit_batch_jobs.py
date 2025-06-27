@@ -39,7 +39,7 @@ def main(RUNID):
                 'id' : name.split('.')[0].split('_')[-1],
             }
             batchfiles.append(b)
-        return sorted(batchfiles)
+        return sorted(batchfiles, key=lambda x: int(x['id']))
 
     batchfiles = get_batchfiles()
 

@@ -14,9 +14,6 @@ load_dotenv('/home/xavaki/DAMM/linkedin_gen_contents/.env')
 TASK_NAME = "article_summarization_v0"
 DEPLOYMENT_NAME = "gpt-4o--batch-2"
 
-def get_run_id():
-    return os.getenv('RUNID')
-
 
 def main(RUNID):
 
@@ -32,17 +29,14 @@ def main(RUNID):
     output_container = blob_service_client.get_container_client(output_container_name)
     assert output_container.exists(), f"Output container '{output_container_name}' does not exist."
 
-    input_blob = input_container.get_blob_client(f'{RUNID}--relevant_articles_content.json')
-    assert input_blob.exists(), f"Input blob '{RUNID}--relevant_articles_content.json' does not exist."
-
     print(f"Run ID: {RUNID} at {RUN_TIME}")
 
-    def get_relevant_articles_content():
-        relevant_articles_content = json.loads(input_blob.download_blob().readall().decode('utf-8'))
-        return relevant_articles_content
+    def get_relevant_articles_content_blob_names():
+        relevant_articles_content_blob_names = input_container.list_blobs(name_starts_with=f"{RUNID}")
+        return relevant_articles_content_blob_names
 
-    relevant_articles_content = get_relevant_articles_content()
-    n_to_process = len(relevant_articles_content)
+    relevant_articles_content_blob_names = get_relevant_articles_content_blob_names()
+    n_to_process = len(relevant_articles_content_blob_names)
     print(f"Number of articles to process: {n_to_process}")
     # print(relevant_articles_content[0])
 
@@ -94,7 +88,8 @@ def main(RUNID):
 
     for i in range(n_batch_jobs):
         print(i)
-        chunk = relevant_articles_content[i*prompts_per_batch_job:min(n_to_process, (i+1)*prompts_per_batch_job)]
+        chunk_names = relevant_articles_content_blob_names[i*prompts_per_batch_job:min(n_to_process, (i+1)*prompts_per_batch_job)]
+        chunk = [json.loads(input_container.get_blob_client(blob.name).download_blob().readall().decode('utf-8')) for blob in chunk_names]
         batchfilename = f"{RUNID}--{TASK_NAME}_BATCHFILE_{i}.jsonl"
 
         batchfile_blob  = output_container.get_blob_client(batchfilename)

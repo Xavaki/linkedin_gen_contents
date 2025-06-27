@@ -1,25 +1,31 @@
 import os
 from dotenv import load_dotenv
 from openai import AzureOpenAI
-import sys
 from datetime import datetime
 from azure.storage.blob import BlobServiceClient
+import sys
 
 load_dotenv('/home/xavaki/DAMM/linkedin_gen_contents/.env')
 
-TASK_NAME = "relevance_check_v0"
+TASK_NAME = "article_summarization_v0"
 
 def get_run_id():
     return os.getenv('RUNID')
 
+
 def main(RUNID):
 
     RUN_TIME = datetime.strftime(datetime.now(), '%Y-%m-%d %H:%M:%S')
+
     blob_service_client = BlobServiceClient.from_connection_string(os.getenv('STORAGE_ACCOUNT_CONNECTION_STRING'))
+
     input_container_name = output_container_name = 'azure-openai-batch-processing-files'
+
     input_container = blob_service_client.get_container_client(input_container_name)
     assert input_container.exists(), f"Input container '{input_container_name}' does not exist."
+
     output_container = blob_service_client.get_container_client(output_container_name)
+
     print(f"Run ID: {RUNID} at {RUN_TIME}")
 
     AZURE_OPENAI_API_KEY=os.getenv('AZURE_OPENAI_API_KEY')
@@ -39,7 +45,7 @@ def main(RUNID):
                 'id' : name.split('.')[0].split('_')[-1],
             }
             batchfiles.append(b)
-        return sorted(batchfiles)
+        return sorted(batchfiles, key=lambda x: int(x['id']))
 
     batchfiles = get_batchfiles()
 
@@ -49,28 +55,37 @@ def main(RUNID):
         batchid_blob.upload_blob(batch_id, overwrite=True)
         print(f"Saved batch ID {batch_id} to {batchid_filename}")
 
-    for bathcfile in batchfiles:
-        i = bathcfile['id']
-        path = bathcfile['path']
-        print(f"Submitting {path}")
+    for batchfile in batchfiles:
+        i = batchfile['id']
+        path = batchfile['path']
+
+        print("Submitting {}".format(path))
+
         batchfile_blob = input_container.get_blob_client(path)
         temp_local_name = path
         with open(temp_local_name, "wb") as file:
             file.write(batchfile_blob.download_blob().readall())
+
         file = client.files.create(
             file=open(path, "rb"),
             purpose="batch"
         )
+
         os.remove(temp_local_name)
+
         print(file.model_dump_json(indent=2))
         file_id = file.id
+
         batch_response = client.batches.create(
             input_file_id=file_id,
             endpoint="/chat/completions",
-            completion_window="24h",
+            completion_window="24h"
         )
+
         batch_id = batch_response.id
+
         print(batch_response.model_dump_json(indent=2))
+
         save_batchid(i, batch_id)
         print("Batch job submitted successfully.")
         print("  ")

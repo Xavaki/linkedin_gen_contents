@@ -1,17 +1,15 @@
-from CLOUD_PIPELINE.SCRIPTS.A_source_crawling.a_crawl_raw_articles_list import main as crawl_raw_articles_list
-from CLOUD_PIPELINE.SCRIPTS.A_source_crawling.A_create_batch_files import main as create_batch_files
-from CLOUD_PIPELINE.SCRIPTS.A_source_crawling.B_submit_batch_jobs import main as submit_batch_jobs
-from CLOUD_PIPELINE.SCRIPTS.A_source_crawling.C_retrieve_output_files import main as retrieve_output_files
-from CLOUD_PIPELINE.SCRIPTS.A_source_crawling.D_process_outputs import main as process_outputs
+from CLOUD_PIPELINE.SCRIPTS.D_relevance_check.A_create_batch_files import main as create_batch_files
+from CLOUD_PIPELINE.SCRIPTS.D_relevance_check.B_submit_batch_jobs import main as submit_batch_jobs
+from CLOUD_PIPELINE.SCRIPTS.D_relevance_check.C_retrieve_output_files import main as retrieve_output_files
+from CLOUD_PIPELINE.SCRIPTS.D_relevance_check.D_process_outputs import main as process_outputs
 
 from time import sleep
 import sys
 
-TASK_NAME = "source_parsing_v0"
+TASK_NAME = "relevance_check_v0"
 
 def main(RUNID: str):
     print(f"Starting {TASK_NAME} orchestrator with RUNID: {RUNID}")
-    crawl_raw_articles_list(RUNID)
 
     create_batch_files(RUNID)
 
@@ -38,8 +36,8 @@ def main(RUNID: str):
     print("Batch jobs completed. Processing outputs...")
     process_outputs(RUNID)
 
+
 if __name__ == "__main__":
-    ...
-    # RUNID = sys.argv[1]
-    # main(RUNID)
+    RUNID = sys.argv[1]
+    main(RUNID)
 

@@ -48,9 +48,13 @@ def main(RUNID):
         title = relevant_article["article_title"]
         print(f"Processing {url}")
         sleep(1)  # Sleep to avoid overwhelming the server
-        article = Article(url)
-        article.download()
-        article.parse()
+        try:
+            article = Article(url)
+            article.download()
+            article.parse()
+        except Exception as e:
+            print(f"Error processing {url}: {e}")
+            continue
         content = article.text
         publish_date = datetime.strftime(article.publish_date, "%Y-%m-%d") if article.publish_date else None
         if not content:

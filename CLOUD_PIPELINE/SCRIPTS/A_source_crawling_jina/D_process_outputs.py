@@ -27,7 +27,7 @@ def main(RUNID):
     blob_service_client = BlobServiceClient.from_connection_string(os.getenv('STORAGE_ACCOUNT_CONNECTION_STRING'))
 
     input_container_name = 'azure-openai-batch-processing-files'
-    output_container_name = 'raw-articles-list'
+    output_container_name = 'raw-articles-list-jina'
 
     input_container = blob_service_client.get_container_client(input_container_name)
     assert input_container.exists(), f"Input container '{input_container_name}' does not exist."
@@ -54,20 +54,20 @@ def main(RUNID):
                 })
         return outputs
 
-    def get_previously_crawled_article_titles():
-        previously_crawled_article_titles = []
-        for blob_info in output_container.list_blobs():
-            blob_name = blob_info.name
-            runid = blob_name.split("--")[0]
-            # Skip if the blob is from the current run
-            if runid == RUNID:
-                continue
-            data = blob_service_client.get_blob_client(output_container_name, blob_name).download_blob().readall().decode('utf-8')
-            data = json.loads(data)
-            for item in data:
-                if 'article_title' in item:
-                    previously_crawled_article_titles.append(item['article_title'])
-        return previously_crawled_article_titles
+    # def get_previously_crawled_article_titles():
+    #     previously_crawled_article_titles = []
+    #     for blob_info in output_container.list_blobs():
+    #         blob_name = blob_info.name
+    #         runid = blob_name.split("--")[0]
+    #         # Skip if the blob is from the current run
+    #         if runid == RUNID:
+    #             continue
+    #         data = blob_service_client.get_blob_client(output_container_name, blob_name).download_blob().readall().decode('utf-8')
+    #         data = json.loads(data)
+    #         for item in data:
+    #             if 'article_title' in item:
+    #                 previously_crawled_article_titles.append(item['article_title'])
+    #     return previously_crawled_article_titles
 
     class RawArticle(BaseModel):
         model: str
@@ -81,7 +81,7 @@ def main(RUNID):
         article_language: str
         crawled_at: str
 
-    previously_crawled_article_titles = get_previously_crawled_article_titles()
+    # previously_crawled_article_titles = get_previously_crawled_article_titles()
 
     new_raw_articles_list = []
     for output in read_outputs():
@@ -100,9 +100,9 @@ def main(RUNID):
 
             sleep(0.01)
 
-            if article_title in previously_crawled_article_titles:
-                print(f"Skipping {article_title} as it has already been crawled.")
-                continue
+            # if article_title in previously_crawled_article_titles:
+            #     print(f"Skipping {article_title} as it has already been crawled.")
+            #     continue
 
             try:
                 raw_article = RawArticle(
@@ -125,7 +125,7 @@ def main(RUNID):
     print(len(new_raw_articles_list))
 
     def save_raw_articles_list():
-        output_blob_name = f"{RUNID}--raw_articles_list.json"
+        output_blob_name = f"{RUNID}--{output_container_name.replace("-", "_")}.json"
         output_blob_client = output_container.get_blob_client(output_blob_name)
         output_blob_client.upload_blob(json.dumps(new_raw_articles_list, indent=4), overwrite=True)
         print(f"Raw articles list saved to blob storage as {output_blob_name}")

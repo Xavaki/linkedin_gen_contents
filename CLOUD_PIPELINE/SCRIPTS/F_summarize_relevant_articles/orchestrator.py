@@ -1,12 +1,12 @@
-from CLOUD_PIPELINE.SCRIPTS.B_relevance_check.A_create_batch_files import main as create_batch_files
-from CLOUD_PIPELINE.SCRIPTS.B_relevance_check.B_submit_batch_jobs import main as submit_batch_jobs
-from CLOUD_PIPELINE.SCRIPTS.B_relevance_check.C_retrieve_output_files import main as retrieve_output_files
-from CLOUD_PIPELINE.SCRIPTS.B_relevance_check.D_process_outputs import main as process_outputs
+from CLOUD_PIPELINE.SCRIPTS.F_summarize_relevant_articles.A_create_batch_files import main as create_batch_files
+from CLOUD_PIPELINE.SCRIPTS.F_summarize_relevant_articles.B_submit_batch_jobs import main as submit_batch_jobs
+from CLOUD_PIPELINE.SCRIPTS.F_summarize_relevant_articles.C_retrieve_output_files import main as retrieve_output_files
+from CLOUD_PIPELINE.SCRIPTS.F_summarize_relevant_articles.D_process_outputs import main as process_outputs
 
 from time import sleep
 import sys
 
-TASK_NAME = "relevance_check_v0"
+TASK_NAME = "article_summarization_v0"
 
 def main(RUNID: str):
     print(f"Starting {TASK_NAME} orchestrator with RUNID: {RUNID}")

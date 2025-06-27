@@ -37,13 +37,14 @@ def main(RUNID):
                 run_id, task_name, article_id = line_id.split("--")
                 content_json = output_dict.get("response").get("body").get("choices")[0].get("message").get("content")
                 content = json.loads(content_json)
+                article_language_llm = content.pop("article_language")
                 outputs.append({
                     "model": model,
                     "run_id": run_id,
                     "task_name": task_name,
                     "article_id": article_id,
-                    "relevance": content.get("relevance"),
-                    "article_language": content.get("article_language"),
+                    "relevance": content,
+                    "article_language": article_language_llm,
                 })
         return outputs
 
@@ -52,14 +53,20 @@ def main(RUNID):
         raw_articles_list = json.loads(blob_service_client.get_blob_client('raw-articles-list', f"{RUNID}--raw_articles_list.json").download_blob().readall().decode('utf-8'))
         raw_articles_dict = {}
         for a in raw_articles_list:
-            a.pop("model")
-            a.pop("task_name")
+            
+            if a.get("crawling_source") == "jina":
+                a.pop("model")
+                a.pop("task_name")
+
             article_id = a.get("article_id")
             raw_articles_dict[article_id] = a
         relevant_articles = []
         for output in outputs:
-            if output.get("relevance") != 2:
+
+            # skip articles for which the model did not return high relevance scores for any persona
+            if 2 not in output.get("relevance").values():
                 continue
+
             article_id = output.get("article_id")
             a = raw_articles_dict[article_id]
             relevant_article = output | a
