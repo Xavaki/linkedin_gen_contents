@@ -117,7 +117,7 @@ def main(RUNID):
     start = time()
     source_contents = asyncio.run(get_all_sources(sources))
     end = time()
-    print(f"Fetched {len(source_contents)} sources in {end - start:.2f} seconds.")
+    print(f"Fetched {len(source_contents)} sources out of {len(sources)} in {end - start:.2f} seconds.")
     save_source_raw_contents(source_contents)
 
 if __name__ == "__main__":
