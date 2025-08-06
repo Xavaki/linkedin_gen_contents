@@ -20,6 +20,9 @@ def main(RUNID):
         input_container = blob_service_client.get_container_client(input_container_name)
         input_blob_name = f"{RUNID}--{input_container_name.replace("-", "_")}.json"
         input_blob_client = input_container.get_blob_client(input_blob_name)
+        if not input_blob_client.exists():
+            print(f"Blob {input_blob_name} does not exist in container {input_container_name}.")
+            return []
         raw_articles_ddgs = input_blob_client.download_blob().readall()
         raw_articles_ddgs = json.loads(raw_articles_ddgs)
         raw_articles_ddgs = [{**a, 'crawling_source' : 'ddgs'} for a in raw_articles_ddgs]

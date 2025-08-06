@@ -11,8 +11,8 @@ import sys
 
 load_dotenv('/home/xavaki/DAMM/linkedin_gen_contents/.env')
 
-TASK_NAME = "article_summarization_v0"
-DEPLOYMENT_NAME = "gpt-4o--batch-2"
+TASK_NAME = "content_validation_v0"
+DEPLOYMENT_NAME = "gpt-4o-mini-2"
 
 
 def main(RUNID):
@@ -35,7 +35,7 @@ def main(RUNID):
         relevant_articles_content_blob_names = input_container.list_blobs(name_starts_with=f"{RUNID}")
         return relevant_articles_content_blob_names
 
-    relevant_articles_content_blob_names = get_relevant_articles_content_blob_names()
+    relevant_articles_content_blob_names = [x for x in get_relevant_articles_content_blob_names()]
     n_to_process = len(relevant_articles_content_blob_names)
     print(f"Number of articles to process: {n_to_process}")
     # print(relevant_articles_content[0])
@@ -45,16 +45,15 @@ def main(RUNID):
     print("Creating {} batch files".format(n_batch_jobs))
 
     system_prompt = """
-    You are a professional content assistant summarizing articles for a LinkedIn thought leader. Your task is to summarize the article in 3 to 8 sentences.
+You are a content validator.
 
-    Focus on:
-    - The main idea or thesis
-    - The most important insight or data
-    - Why it matters to professionals or business leaders
+Your task is to determine whether a given block of text appears to be the full or partial body of a legitimate news or blog article, or whether it is likely to be something else (such as a paywall notice, login prompt, site error, or unrelated text).
 
-    Use clear, concise, and neutral professional English. Avoid fluff, opinion, or casual tone.
+Use the following rules:
+- If the text contains structured paragraphs, informative sentences, and appears to develop an idea or narrative, it is a VALID article.
+- If the text contains mostly boilerplate language, messages about subscriptions, paywalls, 403/404 errors, or lacks meaningful content, it is INVALID.
 
-    **Important:** The summary must be written in English ONLY — even if the source article is written in another language. Do not translate the article; just summarize its core ideas in English.
+Here is the text to validate:
     """
 
     def format_task_jsonl_line(task_id, deployment_name, user_input):
@@ -64,6 +63,7 @@ def main(RUNID):
             "url": "/chat/completions",
             "body": {
                 "model": deployment_name,
+                "temperature": 0.0,
                 "messages": [
                     {
                         "role": "system",
@@ -73,7 +73,27 @@ def main(RUNID):
                         "role": "user",
                         "content": user_input
                     }
-                ]
+                ],
+                "response_format": {
+                    "type": "json_schema",
+                    "json_schema": {
+                        "name": "ArticleContentValidity",
+                        "strict": True,
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "validity": {
+                                    "type": "boolean",
+                                    "description": "Indicates whether the content is a valid article or not."
+                                },
+                            },
+                            "required": [
+                                "validity"
+                            ],
+                            "additionalProperties": False
+                        }
+                    }
+                }
             }
         }
         return jsonl_line_template
@@ -82,6 +102,7 @@ def main(RUNID):
         for j,relevant_article in enumerate(chunk_items):
             article_id = relevant_article["article_id"]
             article_content = relevant_article["content"]
+            article_content = article_content[:2000]  # Truncate to 2000 characters if necessary
             task_id = f"{RUNID}--{TASK_NAME}--{article_id}"
             deployment_name = DEPLOYMENT_NAME
             yield json.dumps(format_task_jsonl_line(task_id=task_id, deployment_name=deployment_name, user_input=article_content)) + "\n"

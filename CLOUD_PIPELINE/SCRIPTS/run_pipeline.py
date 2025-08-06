@@ -8,9 +8,10 @@ from CLOUD_PIPELINE.SCRIPTS.A_source_crawling_jina.orchestrator import main as s
 from CLOUD_PIPELINE.SCRIPTS.B_source_crawling_ddgs import main as source_crawling_ddgs
 from CLOUD_PIPELINE.SCRIPTS.C_deduplicate_raw_articles import main as deduplicate_raw_articles
 from CLOUD_PIPELINE.SCRIPTS.D_relevance_check.orchestrator import main as relevance_check
-from CLOUD_PIPELINE.SCRIPTS.E_read_relevant_articles import main as read_relevant_articles
-from CLOUD_PIPELINE.SCRIPTS.F_summarize_relevant_articles.orchestrator import main as summarize_relevant_articles
-from CLOUD_PIPELINE.SCRIPTS.G_embed_relevant_summaries import main as embed_relevant_summaries
+from CLOUD_PIPELINE.SCRIPTS.E_check_content_validity.orchestrator import main as check_content_validity
+from CLOUD_PIPELINE.SCRIPTS.F_read_relevant_articles import main as read_relevant_articles
+from CLOUD_PIPELINE.SCRIPTS.G_summarize_relevant_articles.orchestrator import main as summarize_relevant_articles
+from CLOUD_PIPELINE.SCRIPTS.H_embed_relevant_summaries import main as embed_relevant_summaries
 
 from dotenv import load_dotenv
 
@@ -18,7 +19,6 @@ from datetime import datetime
 import time 
 
 from argparse import ArgumentParser
-
 
 load_dotenv('/home/xavaki/DAMM/linkedin_gen_contents/.env')
 
@@ -32,21 +32,26 @@ def main(RUNID: str, resume_step: str = None):
 
     pipeline = [
         "source_crawling_jina",
-        "source_crawling_ddgs",
+        # "source_crawling_ddgs",
         "deduplicate_raw_articles",
         "relevance_check",
         "read_relevant_articles",
+        "check_content_validity",
         "summarize_relevant_articles",
         "embed_relevant_summaries"
     ]
 
-    # todo 
     allowed_resume_steps = [
-        "source_crawling_ddgs",
+        "source_crawling_jina",
+        # "source_crawling_ddgs",
         "deduplicate_raw_articles",
+        "relevance_check",
         "read_relevant_articles",
-        "embed_relevant_summaries",
+        "check_content_validity",
+        "summarize_relevant_articles",
+        "embed_relevant_summaries"
     ]
+
     if resume_step and resume_step not in allowed_resume_steps:
         raise ValueError(f"Invalid resume step: {resume_step}. Must be one of {allowed_resume_steps}.")
     
@@ -74,11 +79,13 @@ if __name__ == "__main__":
     parser.add_argument("--run_location", type=str, default="local", help="Location where the pipeline is run (e.g., 'local', 'azure').")
     # resume step option (default is None)
     parser.add_argument("--resume_step", type=str, default=None, help="Step to resume the pipeline from (e.g., 'source_crawling_jina', 'source_crawling_ddgs', etc.). If None, the pipeline will start from the beginning.")
+    parser.add_argument("--runid", type=str, default=None, help="Id of the run. If not provided, it will be generated based on the last run.")
+    
     args = parser.parse_args()
 
     run_location = args.run_location
     resume_step = args.resume_step
-    print(f"Run location: {run_location} | Resume step: {resume_step}")
+    run_id = args.runid
 
     blob_service_client = BlobServiceClient.from_connection_string(os.getenv("STORAGE_ACCOUNT_CONNECTION_STRING"))
     runs_metadata_blob = blob_service_client.get_blob_client(container="runs-metadata", blob="runs_metadata.json")
@@ -87,17 +94,20 @@ if __name__ == "__main__":
     runs_metadata.sort(key=lambda x: int(x.get("RUNID", "").split("_")[-1]), reverse=False)
     last_run = runs_metadata[-1]
     last_run_status = last_run.get("status", "unknown")
-    if last_run_status == "failed":
-        print(f"Last run {last_run['RUNID']} failed at step {last_run.get("failed_step")} with error: {last_run.get('error', 'No error message provided')}.")
-        resume = input(f"Do you want to resume the pipeline from the last failed step {last_run.get("failed_step")}? (y/n): ").strip().lower()
-        if resume == 'y':
-            run_id = last_run['RUNID']
-            resume_step = last_run.get("failed_step")
-        else:
-            print("Starting a new run.")
-            run_id = f"RUNID_{int(last_run['RUNID'].split('_')[-1]) + 1}"
+
+    if run_id is None:
+        print("last run id:", last_run.get("RUNID", "None"))
+        print("last run status:", last_run_status)
+        sys.exit("No RUNID provided. Please provide a RUNID using the --runid argument.")
+
+    accept_run = input(f"Run location: {run_location} | Resume step: {resume_step if resume_step else "-"} | RUNID: {run_id}. Accept this run? (y/n): ")
+
+    if accept_run.lower() != 'y':
+        print("Pipeline run cancelled.")
+        sys.exit(0)
 
     start_time = time.time()
+
     pipeline_success, failed_step, error = main(run_id, resume_step=resume_step)
     run_duration = time.time() - start_time
 
@@ -124,7 +134,7 @@ if __name__ == "__main__":
             "run_duration": run_duration,
             "pipeline_finish_time": pipeline_finish_time
         })
-        runs_metadata_blob.upload_blob(json.dumps(runs_metadata), overwrite=True)
+        runs_metadata_blob.upload_blob(json.dumps(runs_metadata, indent=4), overwrite=True)
 
     # RUNID = sys.argv[1]
     # run_accepted = input("About to run the pipeline with RUNID: {}. Do you accept? (y/n): ".format(RUNID))

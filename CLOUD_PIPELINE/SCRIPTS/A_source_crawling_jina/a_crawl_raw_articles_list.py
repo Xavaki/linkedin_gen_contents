@@ -67,7 +67,11 @@ def main(RUNID):
     source_contents = []
     for source in sources:
         print(source.source_name)
-        source_url_raw_content = fetch_source_content(source)
+        try:
+            source_url_raw_content = fetch_source_content(source)
+        except:
+            print(f"Failed to fetch content for {source.source_name}. Skipping...")
+            continue
         save_content_data = {
             'url': source.url,
             'name': source.source_name.lower().replace(' ', '_'),

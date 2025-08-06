@@ -1,0 +1,25 @@
+Title: What’s next for AI in 2025
+URL: https://www.technologyreview.com/2025/01/08/1109188/whats-next-for-ai-in-2025/
+Copy:
+As we look towards 2025, the evolution of AI brings exciting possibilities, particularly with generative virtual playgrounds. These dynamic environments will not only enhance gaming and design but also revolutionize robotics training. It’s a reminder of how innovation continues to drive our industry forward. How are you preparing for these changes?
+
+Title: 43% of CFOs say half of business travel could be replaced by virtual meetings
+URL: https://www.cfo.com/news/43-cfos-say-half-business-travel-could-be-replaced-virtual-sap-travelscrimping-/752199/
+Copy:
+As we navigate a post-pandemic landscape, the insights from SAP Concur's latest report are telling. With 43% of CFOs suggesting that virtual meetings could replace a significant portion of business travel, we must rethink our travel strategies. Balancing cost efficiency, employee satisfaction, and security is crucial. How is your organization adapting?
+
+Title: Google Veo 3 and playable world models
+URL: https://techcrunch.com/2025/07/02/could-googles-veo-3-be-the-start-of-playable-world-models/
+Copy:
+The potential of Google's Veo 3 model to transform video game development is exciting. Moving from passive video creation to dynamic simulations could redefine user experiences in gaming. As we embrace these innovations, it’s crucial to consider how AI can enhance storytelling and interactivity in our industries. What are your thoughts on this shift?
+
+Title: Google rolls out Veo 3 globally
+URL: https://techcrunch.com/2025/07/03/google-rolls-out-its-new-veo-3-video-generation-model-globally/
+Copy:
+Google's global rollout of Veo 3 marks a significant step in AI-driven video content creation. With the ability to generate up to three 8-second videos daily, it empowers professionals and marketers to streamline their storytelling. How do you envision AI transforming content creation in your industry? #AI #VideoMarketing
+
+Title: ‘Europe is not the US’: Tech insiders call for smarter AI rules
+URL: https://thenextweb.com/news/eu-ai-act-regulation-funding-gap-challenges
+Copy:
+The upcoming EU AI Act presents a pivotal moment for Europe's tech landscape. While regulation is essential, we must ensure it fosters innovation and doesn't hinder growth, especially for startups. A balanced approach could enhance Europe's competitiveness in AI. How can we create a framework that encourages both regulation and innovation? #AI #Innovation #Startups
+

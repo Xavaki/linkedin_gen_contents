@@ -48,14 +48,14 @@ def main(RUNID):
     print("Creating {} batch files".format(n_batch_jobs))
 
     system_prompt = """
-You are an assistant trained to evaluate the relevance of news articles for a group of high-level executives at the Spanish brewery Damm. Based on each executive's professional focus, assess how relevant the article would be for them to comment on, share, or use in professional thought leadership (e.g., LinkedIn posts).
+You are an assistant trained to evaluate the relevance of news articles for a group of high-level executives at the Spanish brewery Damm. Based on each executive’s professional focus and the geographic scope of the article, assess how relevant the article would be for them to engage with (e.g., via a professional LinkedIn post).
 
-Each executive has a specific domain of interest. For the article below, assign a relevance score for each executive based on how well the topic aligns with their area of leadership and communication.
+Use this scoring scale:
+- 0 = Not relevant — The topic has no clear connection to the executive’s role or is out of geographic scope (e.g., regional/local content from unrelated markets).
+- 1 = Somewhat relevant — The article touches loosely on their domain or has partial relevance, but may lack strong strategic value.
+- 2 = Highly relevant — The article directly supports or relates to the executive’s role, values, or public communication focus, and is national (Spain) or global in scope.
 
-Use the following scale:
-- 0 = Not relevant (the article has no clear connection to the executive’s domain)
-- 1 = Somewhat relevant (it loosely touches on their area or could be of tangential interest)
-- 2 = Highly relevant (it directly supports or connects to their role, values, or communication focus)
+**Important**: Articles that are primarily local/regional (e.g., about a single city or local initiative outside Spain without broader impact) should be scored **0**, even if thematically aligned.
 
 Use this executive reference:
 
@@ -92,74 +92,73 @@ Here is the article to evaluate:
                     }
                 ],
                 "response_format": {
-                "type": "json_schema",
-                "json_schema": {
-                    "name": "ArticleRelevanceCheck",
-                    "strict": True,
-                    "schema": {
-                        "type": "object",
-                        "properties": {
-                            "LAURA GIL": {
-                                "type": "integer",
-                                "description": "Article relevance score for executive LAURA GIL",
-                                "enum": [0, 1, 2]
+                    "type": "json_schema",
+                    "json_schema": {
+                        "name": "ArticleRelevanceCheck",
+                        "strict": True,
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "LAURA GIL": {
+                                    "type": "integer",
+                                    "description": "Article relevance score for executive LAURA GIL",
+                                    "enum": [0, 1, 2]
+                                },
+                                "FEDE SEGARRA": {
+                                    "type": "integer",
+                                    "description": "Article relevance score for executive FEDE SEGARRA",
+                                    "enum": [0, 1, 2]
+                                },
+                                "ELÍSABETH HERNÁNDEZ": {
+                                    "type": "integer",
+                                    "description": "Article relevance score for executive ELÍSABETH HERNÁNDEZ",
+                                    "enum": [0, 1, 2]
+                                },
+                                "JAUME ALEMANY": {
+                                    "type": "integer",
+                                    "description": "Article relevance score for executive JAUME ALEMANY",
+                                    "enum": [0, 1, 2]
+                                },
+                                "RICARDO LECHUGA": {
+                                    "type": "integer",
+                                    "description": "Article relevance score for executive RICARDO LECHUGA",
+                                    "enum": [0, 1, 2]
+                                },
+                                "JORGE VILLAVECCHIA": {
+                                    "type": "integer",
+                                    "description": "Article relevance score for executive JORGE VILLAVECCHIA",
+                                    "enum": [0, 1, 2]
+                                },
+                                "SALVADOR MARTÍNEZ": {
+                                    "type": "integer",
+                                    "description": "Article relevance score for executive SALVADOR MARTÍNEZ",
+                                    "enum": [0, 1, 2]
+                                },
+                                "JOFRE RIERA": {
+                                    "type": "integer",
+                                    "description": "Article relevance score for executive JOFRE RIERA",     
+                                    "enum": [0, 1, 2]
+                                },
+                                "article_language": {
+                                    "type": "string",
+                                    "enum": ["es", "ca", "en"],
+                                } 
                             },
-                            "FEDE SEGARRA": {
-                                "type": "integer",
-                                "description": "Article relevance score for executive FEDE SEGARRA",
-                                "enum": [0, 1, 2]
-                            },
-                            "ELÍSABETH HERNÁNDEZ": {
-                                "type": "integer",
-                                "description": "Article relevance score for executive ELÍSABETH HERNÁNDEZ",
-                                "enum": [0, 1, 2]
-                            },
-                            "JAUME ALEMANY": {
-                                "type": "integer",
-                                "description": "Article relevance score for executive JAUME ALEMANY",
-                                "enum": [0, 1, 2]
-                            },
-                            "RICARDO LECHUGA": {
-                                "type": "integer",
-                                "description": "Article relevance score for executive RICARDO LECHUGA",
-                                "enum": [0, 1, 2]
-                            },
-                            "JORGE VILLAVECCHIA": {
-                                "type": "integer",
-                                "description": "Article relevance score for executive JORGE VILLAVECCHIA",
-                                "enum": [0, 1, 2]
-                            },
-                            "SALVADOR MARTÍNEZ": {
-                                "type": "integer",
-                                "description": "Article relevance score for executive SALVADOR MARTÍNEZ",
-                                "enum": [0, 1, 2]
-                            },
-                            "JOFRE RIERA": {
-                                "type": "integer",
-                                "description": "Article relevance score for executive JOFRE RIERA",     
-                                "enum": [0, 1, 2]
-                            },
-                            "article_language": {
-                                "type": "string",
-                                "enum": ["es", "ca", "en"],
-                            } 
-                        },
-                        "required": [
-                            "LAURA GIL",
-                            "FEDE SEGARRA",
-                            "ELÍSABETH HERNÁNDEZ",
-                            "JAUME ALEMANY",
-                            "RICARDO LECHUGA",
-                            "JORGE VILLAVECCHIA",
-                            "SALVADOR MARTÍNEZ",
-                            "JOFRE RIERA",  
-                            "article_language"
-                        ],
-                        "additionalProperties": False
+                            "required": [
+                                "LAURA GIL",
+                                "FEDE SEGARRA",
+                                "ELÍSABETH HERNÁNDEZ",
+                                "JAUME ALEMANY",
+                                "RICARDO LECHUGA",
+                                "JORGE VILLAVECCHIA",
+                                "SALVADOR MARTÍNEZ",
+                                "JOFRE RIERA",  
+                                "article_language"
+                            ],
+                            "additionalProperties": False
+                        }
                     }
                 }
-            }
-
             }
         }
         return jsonl_line_template

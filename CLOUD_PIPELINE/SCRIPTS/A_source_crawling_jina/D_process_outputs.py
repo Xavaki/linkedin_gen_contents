@@ -17,9 +17,6 @@ load_dotenv('/home/xavaki/DAMM/linkedin_gen_contents/.env')
 # Define constants
 TASK_NAME = "source_parsing_v0"
 
-def get_run_id():
-    return os.getenv('RUNID')
-
 def main(RUNID):
 
     RUN_TIME = datetime.strftime(datetime.now(), '%Y-%m-%d %H:%M:%S')
@@ -46,7 +43,7 @@ def main(RUNID):
                 model = output_dict.get("response").get("body").get("model")
                 line_id = output_dict.get("custom_id")
                 content_json = output_dict.get("response").get("body").get("choices")[0].get("message").get("content")
-                content = json.loads(content_json)
+                content = json.loads(content_json) if content_json else {}
                 outputs.append({
                     "model": model,
                     "line_id": line_id,
